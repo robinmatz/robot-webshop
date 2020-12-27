@@ -33,6 +33,11 @@ Verify Successful Login
     [Documentation]     Verifies successful login. Login is successful when user is on 'My Account' page.
     Title Should Be     ${myAccountTitle}
 
+Verify Error Message Is Displayed
+    [Documentation]     Verifies if error message is displayed.
+    [Arguments]         ${expected}
+    Element Text Should Be  ${liErrorMessage}   ${expected}
+
 Logout
     [Documentation]     Loggs out user. After logout verifies if sign in link is present.
     Click Element       ${linkSignOut}
