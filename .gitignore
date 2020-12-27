@@ -1,0 +1,9 @@
+### PyCache ###
+**/__pycache__
+
+### Robot Framework Outputs ###
+**/geckodriver*.log
+**/log.html
+**/output.xml
+**/report.html
+**/*screenshot*.png
