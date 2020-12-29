@@ -6,39 +6,39 @@ Variables               ../PageObjects/locators.py
 *** Keywords ***
 Open Homepage
     [Documentation]     Opens Homepage.
-    [Arguments]         ${browser}
-    Open Browser        ${homePageUrl}          ${browser}
-    Title Should Be     ${homePageTitle}
+    [Arguments]         ${BROWSER}
+    Open Browser        ${HOME_PAGE_URL}.....${BROWSER}
+    Title Should Be     ${HOME_PAGE_TITLE}
 
 Click Login Link
     [Documentation]     Clicks link to login page.
-    Click Element       ${linkSignIn}
-    Title Should Be     ${loginPageTitle}
+    Click Element       ${LINK_SIGN_IN}
+    Title Should Be     ${LOGIN_PAGE_TITLE}
 
 Enter Email
     [Documentation]     Enters user email.
-    [Arguments]         ${userEmail}
-    Input Text          ${inputEmail}       ${userEmail}
+    [Arguments]         ${user email}
+    Input Text          ${INPUT_EMAIL}       ${user email}
 
 Enter Password
     [Documentation]     Enters user password.
-    [Arguments]         ${userPassword}
-    Input Text          ${inputPassword}    ${userPassword}
+    [Arguments]         ${user password}
+    Input Text          ${INPUT_PASSWORD}    ${user password}
 
 Click Login Button
     [Documentation]     Clicks the login button.
-    Click Element       ${btnLogin}
+    Click Element       ${BTN_LOGIN}
 
 Verify Successful Login
     [Documentation]     Verifies successful login. Login is successful when user is on 'My Account' page.
-    Title Should Be     ${myAccountTitle}
+    Title Should Be     ${MY_ACCOUNT_TITLE}
 
 Verify Error Message Is Displayed
     [Documentation]     Verifies if error message is displayed.
     [Arguments]         ${expected}
-    Element Text Should Be  ${liErrorMessage}   ${expected}
+    Element Text Should Be  ${LI_ERROR_MESSAGE}   ${expected}
 
 Logout
     [Documentation]     Loggs out user. After logout verifies if sign in link is present.
-    Click Element       ${linkSignOut}
-    Element Should Be Visible   ${linkSignIn}
+    Click Element       ${LINK_SIGN_OUT}
+    Element Should Be Visible   ${LINK_SIGN_IN}

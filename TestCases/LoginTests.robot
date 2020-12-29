@@ -1,6 +1,9 @@
 *** Settings ***
 Library                 SeleniumLibrary
-Resource    ../Resources/LoginKeywords.robot
+Resource                ../Resources/LoginKeywords.robot
+
+Test Setup              Initialize Tests
+Test Teardown           Close Browser
 
 *** Variables ***
 ${BROWSER}              %{BROWSER}
@@ -8,13 +11,10 @@ ${BROWSER}              %{BROWSER}
 *** Test Cases ***
 Valid Login
     [Documentation]     Tests if user can login with correct login credentials.
-    Open Homepage       ${BROWSER}
-
-    Click Login Link
-
+    
     Enter Email         r.matz@test.com
 
-    Enter Password      Tosca1234!
+    Enter Password      oKF5uM4vx5uOng4
 
     Click Login Button
 
@@ -22,36 +22,30 @@ Valid Login
 
     Logout
 
-    Close Browser
-
 Login With Wrong Email
     [Documentation]     Tests if login with wrong email results in error.
-    Open Homepage       ${BROWSER}
-
-    Click Login Link
-
+    
     Enter Email         r.matz@test.de 
 
-    Enter Password      Tosca1234!
+    Enter Password      oKF5uM4vx5uOng4
 
     Click Login Button
 
     Verify Error Message Is Displayed  Authentication failed.
-
-    Close Browser
 
 Login With Wrong Password
     [Documentation]     Tests if login with wrong password results in error.
-    Open Homepage       ${BROWSER}
-
-    Click Login Link
 
     Enter Email         r.matz@test.com
 
-    Enter Password      Tosca1234
+    Enter Password      ABCDE1234
 
     Click Login Button
 
     Verify Error Message Is Displayed  Authentication failed.
 
-    Close Browser
+*** Keywords ***
+Initialize Tests
+    Open Homepage       ${BROWSER}
+
+    Click Login Link
