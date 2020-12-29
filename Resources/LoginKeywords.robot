@@ -7,7 +7,7 @@ Variables               ../PageObjects/locators.py
 Open Homepage
     [Documentation]     Opens Homepage.
     [Arguments]         ${BROWSER}
-    Open Browser        ${HOME_PAGE_URL}.....${BROWSER}
+    Open Browser        ${HOME_PAGE_URL}     ${BROWSER}
     Title Should Be     ${HOME_PAGE_TITLE}
 
 Click Login Link
@@ -18,12 +18,12 @@ Click Login Link
 Enter Email
     [Documentation]     Enters user email.
     [Arguments]         ${user email}
-    Input Text          ${INPUT_EMAIL}       ${user email}
+    Input Text          ${INPUT_EMAIL}      ${user email}
 
 Enter Password
     [Documentation]     Enters user password.
     [Arguments]         ${user password}
-    Input Text          ${INPUT_PASSWORD}    ${user password}
+    Input Text          ${INPUT_PASSWORD}   ${user password}
 
 Click Login Button
     [Documentation]     Clicks the login button.
