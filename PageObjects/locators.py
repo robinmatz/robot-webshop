@@ -56,6 +56,11 @@ BTN_CONFIRM_ORDER = "//*[text()='I confirm my order']"
 ORDER_SUCCESSFUL = "//strong[contains(text(),'Your order on My Store is complete.')]"
 
 # Login Page
+# Create Account
+INPUT_REGISTER_EMAIL = "id:email_create"
+BTN_CREATE = "id:SubmitCreate"
+
+# Already Registered
 LOGIN_PAGE_TITLE = "Login - My Store"
 INPUT_EMAIL = "id:email"
 INPUT_PASSWORD = "id:passwd"
