@@ -9,13 +9,13 @@ jobs:
     steps:
     - uses: robinmatz/robot-webshop@v2
     - run:
-      docker run \
-      -i \
-      --rm \
-      -e ROBOT_REPORTS_DIR=/opt/robotframework/Reports \
-      -e ROBOT_TESTS_DIR=/opt/robotframework/TestCases \
-      -v ${PWD}/Reports:/opt/robotframework/Reports \
-      -v ${PWD}/TestCases:/opt/robotframework/TestCases \
-      -v ${PWD}/Resources:/opt/robotframework/Resources \
-      -v ${PWD}/PageObjects:/opt/robotframework/PageObjects \
-      ppodgorsek/robot-framework:latest
+        docker run \
+        -i \
+        --rm \
+        -e ROBOT_REPORTS_DIR=/opt/robotframework/Reports \
+        -e ROBOT_TESTS_DIR=/opt/robotframework/TestCases \
+        -v ${PWD}/Reports:/opt/robotframework/Reports \
+        -v ${PWD}/TestCases:/opt/robotframework/TestCases \
+        -v ${PWD}/Resources:/opt/robotframework/Resources \
+        -v ${PWD}/PageObjects:/opt/robotframework/PageObjects \
+        ppodgorsek/robot-framework:latest
