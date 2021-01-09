@@ -1,5 +1,5 @@
 *** Settings ***
-Library             SeleniumLibrary     implicit_wait=5.0
+Library             SeleniumLibrary
 Library             DateTime
 Variables           ../PageObjects/locators.py
 Variables           ../PageObjects/registration_page.py

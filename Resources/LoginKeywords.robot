@@ -1,5 +1,5 @@
 *** Settings ***
-Library                 SeleniumLibrary     implicit_wait=5.0
+Library                 SeleniumLibrary
 Variables               ../PageObjects/locators.py
 
 
@@ -8,6 +8,7 @@ Open Homepage
     [Documentation]     Opens Homepage.
     [Arguments]         ${BROWSER}
     Open Browser        ${HOME_PAGE_URL}     ${BROWSER}
+    Set Selenium Implicit Wait  30 Seconds
     Title Should Be     ${HOME_PAGE_TITLE}
 
 Click Login Link
@@ -21,7 +22,7 @@ Enter Email
     Log Source
     Input Text          ${INPUT_EMAIL}      ${user email}
     Log Source
-    
+
 Enter Password
     [Documentation]     Enters user password.
     [Arguments]         ${user password}
