@@ -18,7 +18,6 @@ Click Register Button
 Enter Personal Information
     [Documentation]     Enters the provided information in the registration form.
     [Arguments]         ${first name}   ${last name}    ${password}
-    Wait Until Page Contains Element    ${BTN_MR}
     Click Element       ${BTN_MR}
     Input Text          ${INPUT_FIRST_NAME}     ${first name}
     Input Text          ${INPUT_LAST_NAME}      ${last name}
