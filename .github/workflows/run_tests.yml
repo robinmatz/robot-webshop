@@ -3,15 +3,25 @@ name: Run Robot Framework Tests
 on: [push]
 
 jobs:
-  tests:
+  test:
     runs-on: ubuntu-latest
+    
+    # run all tests on multiple browser
+    strategy:
+      matrix:
+        include:
+          - browser: "chrome"
+          - browser: "firefox"
+
+    env: 
+      BROWSER: ${{ matrix.browser }}
 
     steps:
       - name: Checkout repository 
         uses: actions/checkout@v2
       - name: Run Tests  
         run:
-          docker run -i --rm --user root -e BROWSER=chrome -e ROBOT_REPORTS_DIR=/opt/robotframework/Reports -e ROBOT_TESTS_DIR=/opt/robotframework/TestCases -v ${PWD}/Reports:/opt/robotframework/Reports -v ${PWD}/TestCases:/opt/robotframework/TestCases -v ${PWD}/Resources:/opt/robotframework/Resources -v ${PWD}/PageObjects:/opt/robotframework/PageObjects ppodgorsek/robot-framework:latest
+          docker run -i --rm --user root -e BROWSER=$BROWSER -e ROBOT_REPORTS_DIR=/opt/robotframework/Reports -e ROBOT_TESTS_DIR=/opt/robotframework/TestCases -v ${PWD}/Reports:/opt/robotframework/Reports -v ${PWD}/TestCases:/opt/robotframework/TestCases -v ${PWD}/Resources:/opt/robotframework/Resources -v ${PWD}/PageObjects:/opt/robotframework/PageObjects ppodgorsek/robot-framework:latest
       - name: Upload Job Artifacts
         uses: actions/upload-artifact@v2
         with:
