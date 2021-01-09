@@ -62,7 +62,7 @@ BTN_CREATE = "id:SubmitCreate"
 
 # Already Registered
 LOGIN_PAGE_TITLE = "Login - My Store"
-INPUT_EMAIL = "id:email"
+INPUT_EMAIL = "//*[@id='email']"
 INPUT_PASSWORD = "id:passwd"
 BTN_LOGIN = "id:SubmitLogin"
 
