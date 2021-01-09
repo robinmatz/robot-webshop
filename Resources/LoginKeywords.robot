@@ -19,7 +19,9 @@ Click Login Link
 Enter Email
     [Documentation]     Enters user email.
     [Arguments]         ${user email}
+    Log Source
     Input Text          ${INPUT_EMAIL}      ${user email}
+    Log Source
 
 Enter Password
     [Documentation]     Enters user password.

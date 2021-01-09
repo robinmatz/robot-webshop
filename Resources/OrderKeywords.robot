@@ -14,10 +14,11 @@ Select T-Shirt
 Add Product To Cart
     [Documentation]     Adds product to shopping cart.
     Click Element       ${BTN_ADD_TO_CART}
-    Element Should Be Visible  ${SUCCESS_ICON}
+    Wait Until Element Is Visible  ${SUCCESS_ICON}
 
 Proceed To Checkout
     [Documentation]     Clicks on proceed to checkout button.
+    Wait Until Page Contains Element   ${BTN_PROCEED}
     Click Element           ${BTN_PROCEED}   
 
 Verify Order Details
@@ -34,6 +35,7 @@ Verify Order Details
 Verify Delivery Address
     [Documentation]     Verifies delivery address details.
     [Arguments]         ${fullName}     ${address}      ${city}     ${country}      ${phone}
+    Wait Until Element Is Visible   ${DA_HEADER}
     Element Text Should Be  ${DA_FIRST_NAME_LAST_NAME}  ${fullName}
     Element Text Should Be  ${DA_ADDRESS}   ${address}
     Element Text Should Be  ${DA_ADDRESS_CITY}      ${city}
@@ -43,6 +45,7 @@ Verify Delivery Address
 Verify Billing Address 
     [Documentation]     Verifies billing address details.
     [Arguments]         ${fullName}     ${address}      ${city}     ${country}      ${phone}
+    Wait Until Element Is Visible   ${BA_HEADER}
     Element Text Should Be  ${BA_FIRST_NAME_LAST_NAME}  ${fullName}
     Element Text Should Be  ${BA_ADDRESS}   ${address}
     Element Text Should Be  ${BA_ADDRESS_CITY}      ${city}
