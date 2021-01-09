@@ -8,6 +8,7 @@ Open Homepage
     [Documentation]     Opens Homepage.
     [Arguments]         ${BROWSER}
     Open Browser        ${HOME_PAGE_URL}     ${BROWSER}
+    Set Selenium Implicit Wait  30 Seconds
     Title Should Be     ${HOME_PAGE_TITLE}
 
 Click Login Link
@@ -18,7 +19,9 @@ Click Login Link
 Enter Email
     [Documentation]     Enters user email.
     [Arguments]         ${user email}
+    Log Source
     Input Text          ${INPUT_EMAIL}      ${user email}
+    Log Source
 
 Enter Password
     [Documentation]     Enters user password.
