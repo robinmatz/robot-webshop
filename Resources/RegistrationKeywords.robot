@@ -44,6 +44,19 @@ Enter Address Information
     Select From List By Value   ${ADR_COUNTRY}  21
     Input Text          ${ADR_MOBILE}   0123456789
 
+Enter Full Address Information
+    [Documentation]     Provides user address information.
+    Input Text          ${ADR_COMPANY}  Sample Inc.         
+    Input Text          ${ADR_ADR1}     Sample Street 1
+    Input Text          ${ADR_ADR2}     Backyard
+    Input Text          ${ADR_CITY}     Sample Town 
+    Select From List By Value   ${ADR_STATE}    36
+    Input Text          ${ADR_POSTCODE}         12345
+    Select From List By Value   ${ADR_COUNTRY}  21
+    Input Text          ${TA_INFORMATION}   Additional Info
+    Input Text          ${ADR_PHONE}    0123456788
+    Input Text          ${ADR_MOBILE}   0123456789
+
 Submit Registration
     [Documentation]     Submits the provided registration data.
     Click Element       ${BTN_REGISTER_SUBMIT}
