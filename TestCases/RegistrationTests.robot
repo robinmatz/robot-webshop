@@ -25,6 +25,22 @@ Valid Registration
 
     Submit Registration
 
+Valid Registration All Fields
+
+    Enter Registration Email
+
+    Click Register Button
+
+    Enter Personal Information  ${FIRST NAME}  ${LAST NAME}     ${PASSWORD}
+
+    Sign Up For Newsletter
+
+    Sign Up For Special Offers
+
+    Enter Full Address Information
+
+    Submit Registration
+
 *** Keywords ***
 Initialize Tests
     Open Homepage       ${BROWSER}
