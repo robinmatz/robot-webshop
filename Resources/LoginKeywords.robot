@@ -1,5 +1,6 @@
 *** Settings ***
 Library                 SeleniumLibrary
+Variables               ../PageObjects/home_page.py
 Variables               ../PageObjects/locators.py
 
 
