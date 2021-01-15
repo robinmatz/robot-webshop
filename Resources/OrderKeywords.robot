@@ -1,5 +1,6 @@
 *** Settings ***
-Library                 SeleniumLibrary     implicit_wait=5.0
+Library                 SeleniumLibrary
+Variables               ../PageObjects/home_page.py
 Variables               ../PageObjects/locators.py
 
 *** Keywords ***
