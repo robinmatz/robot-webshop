@@ -46,6 +46,17 @@ Order T-Shirt
 
     Confirm Order
 
+Remove Order
+    [Documentation]     Tests if a selected product can be removed from shopping cart
+    Navigate To T-Shirts
+
+    Select T-Shirt
+
+    Add Product To Cart
+
+    Close Add To Cart Popup
+    
+    Remove Item From Shopping Cart
 
 *** Keywords ***
 Initialize Tests

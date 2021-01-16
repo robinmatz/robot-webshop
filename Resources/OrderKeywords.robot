@@ -17,6 +17,20 @@ Add Product To Cart
     Click Element       ${BTN_ADD_TO_CART}
     Wait Until Element Is Visible  ${SUCCESS_ICON}
 
+Close Add To Cart Popup
+    [Documentation]     Closes the dialog that pops up after adding a product to cart.
+    Click Element       ${CLOSE_ICON}
+
+Remove Item From Shopping Cart
+    [Documentation]     Removes a product from shopping cart.
+    Mouse Over          ${SHOPPING_CART}
+    Sleep               2 seconds
+    Click Element       ${LINK_REMOVE_ITEM}
+    Wait Until Element Is Visible   ${TA_CART_EMPTY}
+
+Continue Shopping
+    [Documentation]     Clicks the continue shopping button.
+
 Proceed To Checkout
     [Documentation]     Clicks on proceed to checkout button.
     Wait Until Page Contains Element   ${BTN_PROCEED}
