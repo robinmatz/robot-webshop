@@ -6,7 +6,11 @@ LINK_T_SHIRT = "//a[contains(text(),'Faded Short Sleeve T-shirts')]"
 BTN_ADD_TO_CART = "//span[contains(text(),'Add to cart')]"
 
 # Added To Cart Popup
+CLOSE_ICON = "//*[@title='Close window']"
 SUCCESS_ICON = "class:icon-ok"
+BTN_CONTINUE_SHOPPING_1 = "//*[contains(@class, 'continue')]"
+BTN_CONTINUE_SHOPPING_2 = "//a[@title='Continue shopping']"
+BTN_CONTINUE_SHOPPING_3 = "//a[@title='Previous']"
 BTN_PROCEED = "(//*[contains(text(),'Proceed to checkout')])[last()]"
 
 # Shopping Cart Summary
