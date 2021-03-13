@@ -9,12 +9,12 @@ Test Teardown           Teardown Tests
 *** Variables ***
 ${BROWSER}              %{BROWSER}
 ${EMAIL}                r.matz@test.com
-${PASSWORD}             oKF5uM4vx5uOng4
-${FULL NAME}            Robertus Matzensis
-${ADDRESS}              Sample Street 2
-${CITY}                 Sample City, Iowa 56548
+${PASSWORD}             8!BiF70Tlf55z$l
+${FULL NAME}            Nathalie Schulz
+${ADDRESS}              Sample Street 1
+${CITY}                 Sample Town, Alabama 12345
 ${COUNTRY}              United States
-${PHONE}                014723123421
+${PHONE}                1234567890
 
 *** Test Cases ***
 Order T-Shirt
@@ -28,7 +28,7 @@ Order T-Shirt
 
     Proceed To Checkout
 
-    Verify Order Details        $16.51          1               $16.51      $2.00          $0.00        $18.51
+    Verify Order Details        $16.51          1               $16.51      $2.00          $0.74        $19.25
 
     Proceed To Checkout
 
