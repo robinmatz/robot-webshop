@@ -9,6 +9,7 @@ Open Homepage
     [Documentation]     Opens Homepage.
     [Arguments]         ${BROWSER}
     Open Browser        ${HOME_PAGE_URL}     ${BROWSER}
+    Maximize Browser Window
     Set Selenium Implicit Wait  30 Seconds
     Title Should Be     ${HOME_PAGE_TITLE}
 

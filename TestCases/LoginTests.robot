@@ -14,7 +14,7 @@ Valid Login
     
     Enter Email         r.matz@test.com
 
-    Enter Password      oKF5uM4vx5uOng4
+    Enter Password      8!BiF70Tlf55z$l
 
     Click Login Button
 
