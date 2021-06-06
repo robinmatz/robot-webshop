@@ -1,30 +1,21 @@
 *** Settings ***
-Library         SeleniumLibrary
-Resource        ../Resources/LoginKeywords.robot
-Resource        ../Resources/ContactKeywords.robot
-
-Test Setup      Initialize Tests
-Test Teardown   Close Browser
+Documentation     Test Suite for Contact Tests.
+Library           SeleniumLibrary
+Resource          ../Resources/LoginKeywords.robot
+Resource          ../Resources/ContactKeywords.robot
+Test Setup        Open Homepage    ${BROWSER}
+Test Teardown     Close Browser
 
 *** Variables ***
-${BROWSER}      %{BROWSER}
-${EMAIL}        r.matz@test.com 
+${BROWSER}        chrome
+${EMAIL}          r.matz@test.com
 
 *** Test Cases ***
 Send Contact Message
-    
+    [Documentation]    Tests the send contact form.
     Navigate To Contact Form
-
     Choose Subject
-
-    ContactKeywords.Enter Email     ${EMAIL}
-
+    ContactKeywords.Enter Email    ${EMAIL}
     Enter Order Reference
-
     Enter Message
-
     Click Send Button
-
-*** Keywords ***
-Initialize Tests
-    Open Homepage   ${BROWSER}
