@@ -2,6 +2,10 @@
 **/.idea
 **/.vscode
 
+# Virtual environment
+.venv
+venv
+
 ### PyCache ###
 **/__pycache__
 
