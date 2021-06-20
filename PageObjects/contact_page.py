@@ -5,6 +5,7 @@ INPUT_CONTACT_EMAIL = "id:email"
 INPUT_ORDER_REF = "id:id_order"
 INPUT_FILE = "id:fileUpload"
 TA_MESSAGE = "id:message"
+FILE_TEXT = "class:filename"
 BTN_SUBMIT = "id:submitMessage"
 
 TA_SUCCESS = "//*[@class='alert alert-success']"

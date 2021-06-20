@@ -17,7 +17,7 @@ Click Login Link
     Click Element    ${LINK_SIGN_IN}
     Title Should Be    ${LOGIN_PAGE_TITLE}
 
-Enter Email
+Enter Login Email
     [Documentation]    Enters user email.
     [Arguments]    ${user email}
     Log Source

@@ -1,5 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
+Library           SeleniumLibrary    run_on_failure=On Failure
 Library           String
 Variables         ../PageObjects/contact_page.py
 Variables         ../PageObjects/home_page.py
@@ -28,7 +28,17 @@ Enter Message
     [Documentation]    Enters a message in the respective textarea.
     Input Text    ${TA_MESSAGE}    Sample Message
 
+Send File
+    [Documentation]    Sends a sample file for the test case.
+    Choose File    ${INPUT_FILE}    ${CURDIR}${/}samplePDF.pdf
+    Element Text Should Be    ${FILE_TEXT}    samplePDF.pdf
+
 Click Send Button
     [Documentation]    Submits the contact message.
     Click Element    ${BTN_SUBMIT}
     Element Should Be Visible    ${TA_SUCCESS}
+
+On Failure
+    [Documentation]    Takes a screenshot and logs page source.
+    Capture Page Screenshot
+    Log Source
