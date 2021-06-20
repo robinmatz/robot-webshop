@@ -9,10 +9,14 @@ The system under test (SUT) is an open source demo web shop hosted under http://
 In order to run test cases, you will need:
 - An installation of Python (https://www.python.org/downloads/)
 - Location of *python.exe* as well as *pip.exe* needs to be in PATH variable
-- The following packages for python:
-    - robotframework (https://pypi.org/project/robotframework/)
-    - robotframework-seleniumlibrary (https://pypi.org/project/robotframework-seleniumlibrary/)
-    - selenium (https://pypi.org/project/selenium/)
+- Create a virtual python environment. You can do so via command line by changing into the `robot-webshop` folder and running.
+```
+python -m venv .venv
+```
+- Install the necessary dependencies, like:
+```
+pip install -r requirements.txt
+```
 - Location of driver executables (*chromedriver.exe*, *geckodriver.exe*, etc.) needs to be in PATH variable
 
 #### Execute Test Cases
