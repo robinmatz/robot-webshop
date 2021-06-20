@@ -1,7 +1,7 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource          ../Resources/LoginKeywords.robot
-Resource          ../Resources/OrderKeywords.robot
+Resource          ../Resources/LoginKeywords.resource
+Resource          ../Resources/OrderKeywords.resource
 Test Setup        Initialize Tests
 Test Teardown     Teardown Tests
 
@@ -44,7 +44,7 @@ Remove Order
 Initialize Tests
     Open Homepage    ${BROWSER}
     Click Login Link
-    Enter Email    ${EMAIL}
+    Enter Login Email    ${EMAIL}
     Enter PASSWORD    ${PASSWORD}
     Click Login Button
     Verify Successful Login

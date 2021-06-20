@@ -1,21 +1,19 @@
 *** Settings ***
-Library           SeleniumLibrary
-Resource          ../Resources/LoginKeywords.robot
-Resource          ../Resources/RegistrationKeywords.robot
+Resource          ../Resources/Settings.resource
 Test Setup        Initialize Tests
 Test Teardown     Close Browser
 
 *** Variables ***
 ${BROWSER}        chrome
 ${FIRST NAME}     John
-${LAsT NAME}      Doe
+${LAST NAME}      Doe
 ${PASSWORD}       abcd1234!
 
 *** Test Cases ***
 Valid Registration
     Enter Registration Email
     Click Register Button
-    Enter Personal Information    ${FIRST NAME}    ${LAsT NAME}    ${PASSWORD}
+    Enter Personal Information    ${FIRST NAME}    ${LAST NAME}    ${PASSWORD}
     Enter Address Information
     Submit Registration
 
