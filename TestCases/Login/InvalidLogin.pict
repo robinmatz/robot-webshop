@@ -1,0 +1,20 @@
+Username:       ${VALID_USER}, ${INVALID_USER}, ${EMPTY_USER}
+Password:       ${VALID_PASSWORD}, ${INVALID_PASSWORD}, ${EMPTY_PASSWORD}
+
+# If username is invalid or empty, password should be valid
+IF [Username] in {
+    "${INVALID_USER}",
+    "${EMPTY_USER}"
+    } 
+THEN [Password] = "${VALID_PASSWORD}";
+
+# If password is invalid or empty, username should be valid
+IF [Password] in {
+    "${INVALID_PASSWORD}",
+    "${EMPTY_PASSWORD}"
+    }
+THEN [Username] = "${VALID_USER}";
+
+# Combination 'valid user and valid password' 
+# does not match criteria for 'invalid login' test case
+IF [Username] = "${VALID_USER}" THEN [Password] <> "${VALID_PASSWORD}";

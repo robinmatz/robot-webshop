@@ -1,0 +1,5 @@
+*** Test Cases ***;${username};${password};${error_text};[Tags];[Documentation]
+Login With Empty User And Valid Password;${EMPTY_USER};${VALID_PASSWORD};An email address required.;;
+Login With Valid User And Invalid Password;${VALID_USER};${INVALID_PASSWORD};Authentication failed.;;
+Login With Invalid User And Valid Password;${INVALID_USER};${VALID_PASSWORD};Invalid email address.;;
+Login With Valid User And Empty Password;${VALID_USER};${EMPTY_PASSWORD};Authentication failed.;;
