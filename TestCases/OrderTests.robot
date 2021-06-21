@@ -1,14 +1,13 @@
 *** Settings ***
-Library           SeleniumLibrary
-Resource          ../Resources/LoginKeywords.resource
-Resource          ../Resources/OrderKeywords.resource
+Documentation     Test suite for order tests.
+Resource          ../Resources/Settings.resource
 Test Setup        Initialize Tests
 Test Teardown     Teardown Tests
 
 *** Variables ***
 ${BROWSER}        chrome
 ${EMAIL}          r.matz@test.com
-${PASSWORD}       8!BiF70Tlf55z$l
+${PASSWORD}       crypt:CeuBeHtFIW81i/XICA+7xtce43pCQL0aQtjgXfx85GsfM8yQEr5ja1r7nY+GRbo68TdAIklHQfNuWV1K
 ${FULL NAME}      Nathalie Schulz
 ${ADDRESS}        Sample Street 1
 ${CITY}           Sample Town, Alabama 12345

@@ -11,7 +11,7 @@ ${BROWSER}        chrome
 Valid Login
     [Documentation]    Tests if user can login with correct login credentials.
     Enter Login Email    r.matz@test.com
-    Enter Password    8!BiF70Tlf55z$l
+    Enter Password    crypt:CeuBeHtFIW81i/XICA+7xtce43pCQL0aQtjgXfx85GsfM8yQEr5ja1r7nY+GRbo68TdAIklHQfNuWV1K
     Click Login Button
     Verify Successful Login
     Logout

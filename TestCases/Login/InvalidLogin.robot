@@ -8,7 +8,7 @@ Test Template     Invalid Login
 *** Variables ***
 ${BROWSER}        chrome
 ${VALID_USER}     r.matz@test.com
-${VALID_PASSWORD}    8!BiF70Tlf55z$l
+${VALID_PASSWORD}    crypt:CeuBeHtFIW81i/XICA+7xtce43pCQL0aQtjgXfx85GsfM8yQEr5ja1r7nY+GRbo68TdAIklHQfNuWV1K
 ${INVALID_USER}    invalid
 ${INVALID_PASSWORD}    invalid
 ${EMPTY_USER}     ${EMPTY}
