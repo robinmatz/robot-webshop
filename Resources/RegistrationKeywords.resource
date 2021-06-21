@@ -1,9 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
-Library           DateTime
-Variables         ../PageObjects/home_page.py
-Variables         ../PageObjects/locators.py
-Variables         ../PageObjects/registration_page.py
+Resource        Settings.resource
 
 *** Keywords ***
 Enter Registration Email

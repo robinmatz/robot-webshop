@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation     Test suite for registration tests.
 Resource          ../Resources/Settings.resource
 Test Setup        Initialize Tests
 Test Teardown     Close Browser

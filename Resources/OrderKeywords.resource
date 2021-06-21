@@ -1,7 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
-Variables         ../PageObjects/home_page.py
-Variables         ../PageObjects/locators.py
+Resource        Settings.resource
 
 *** Keywords ***
 Navigate To T-Shirts
